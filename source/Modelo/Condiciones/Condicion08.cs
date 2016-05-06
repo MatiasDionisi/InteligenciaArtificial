@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Modelo.Condiciones
 {
-    class Condicion10 : ICondition
+    public class Condicion08 : ICondition
     {
         public double valueFromPersona(List<Persona> personas)
         {
             double retorno = (double)Valores.INVALIDO;
-            //          if (personas.FindAll(persona => persona.Name.Equals(Name.Saverio) && !persona.MouthAction.Equals(MouthAction.Canta))
-            //                    .Count > 0)
-            if (personas.FindAll(persona => persona.Nationality.Equals(Nationality.Español) && persona.Sneakers.Equals(Sneakers.Topper)).Count == 1)
+            if (personas.FindAll(persona => persona.Name.Equals(Name.Alves) && !persona.Nationality.Equals(Nationality.Uruguayo)).Count > 0 &&
+                personas.FindAll(persona => persona.Name.Equals(Name.Alves)).Count == 1)
             {
                 retorno = (double)Valores.VALIDO;
             }

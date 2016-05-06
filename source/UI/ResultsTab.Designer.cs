@@ -55,6 +55,7 @@
             this.chart.Size = new System.Drawing.Size(684, 325);
             this.chart.TabIndex = 3;
             this.chart.Text = "chart";
+            this.chart.Click += new System.EventHandler(this.chart_Click);
             // 
             // label1
             // 

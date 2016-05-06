@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Modelo.Condiciones
 {
-    class Condicion19 : ICondition
+    public class Condicion03 : ICondition //Cantidad de botines Topper igual a 2
     {
         public double valueFromPersona(List<Persona> personas)
         {
             double retorno = (double)Valores.INVALIDO;
-//          if (personas.FindAll(persona => persona.MouthAction.Equals(MouthAction.Tararea) && persona.Vehicle.Equals(Vehicle.Bicicleta))
-//                      .Count == 1 )
-//          {
-//              retorno = (double)Valores.VALIDO;
-//          }
+            if (personas.FindAll(persona => persona.Sneakers.Equals(Sneakers.Topper)).Count == 2)
+            {
+                retorno = (double)Valores.VALIDO;
+            }
             return retorno;
         }
     }

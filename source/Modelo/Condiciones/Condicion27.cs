@@ -11,11 +11,11 @@ namespace Modelo.Condiciones
         public double valueFromPersona(List<Persona> personas)
         {
             double retorno = (double)Valores.INVALIDO;
-            if (personas.FindAll(persona => persona.Name.Equals(Name.Baltasar) && !persona.Vehicle.Equals(Vehicle.Camion))
-                        .Count == 1)
-            {
-                retorno = (double)Valores.VALIDO;
-            }
+//          if (personas.FindAll(persona => persona.Name.Equals(Name.Baltasar) && !persona.Vehicle.Equals(Vehicle.Camion))
+//                      .Count == 1)
+//          {
+//              retorno = (double)Valores.VALIDO;
+//          }
             return retorno;
         }
     }

@@ -13,7 +13,7 @@ namespace AlgoritmoGenetico
         const int porcentajeInicialDeElitismo = 5;
         const double probabilidadDeCrossOver = 0.8;
         static public double probabilidadDeMutacion = 0.12;
-        const int longitudDelCromosoma = 45;
+        const int longitudDelCromosoma = 30;
         private Stopwatch reloj = new Stopwatch();
         static public int fitnessRequerido = 1350;
         static public int cantidadDeIteraciones = 1000;

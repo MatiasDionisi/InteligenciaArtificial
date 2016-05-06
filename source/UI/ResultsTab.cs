@@ -36,8 +36,13 @@ namespace UI
                 "Mejor individuo Fitness: " + e.Population.MaximumFitness.ToString() + "\n";
             foreach (var persona in maxIndividual)
             {
-                resultsText.Text += "Nombre: " + persona.Name + ", Nacionalidad: " + persona.Nationality + ", Vehículo: " + persona.Vehicle + ", Gesto: " + persona.MouthAction + "\n";
+                resultsText.Text += "Nombre: " + persona.Name + ", Nacionalidad: " + persona.Nationality + ", Botines: " + persona.Sneakers + "\n";
             }
+        }
+
+        private void chart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

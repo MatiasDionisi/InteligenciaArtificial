@@ -10,14 +10,13 @@ namespace Modelo.Condiciones
     {
         public double valueFromPersona(List<Persona> personas)
         {
-
             double retorno = (double)Valores.INVALIDO;
-            if (personas.FindAll(persona => persona.MouthAction.Equals(MouthAction.Silba) && !persona.Nationality.Equals(Nationality.Griego))
-                        .Count > 0 &&
-                        personas.FindAll(persona => persona.MouthAction.Equals(MouthAction.Silba)).Count == 1)
-            {
-                retorno = (double)Valores.VALIDO;
-            }
+//          if (personas.FindAll(persona => persona.MouthAction.Equals(MouthAction.Silba) && !persona.Nationality.Equals(Nationality.Griego))
+//                      .Count > 0 &&
+//                      personas.FindAll(persona => persona.MouthAction.Equals(MouthAction.Silba)).Count == 1)
+//          {
+//              retorno = (double)Valores.VALIDO;
+//          }
             return retorno;
         }
     }

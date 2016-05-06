@@ -45,6 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acertijo.cs" />
+    <Compile Include="Condiciones\Condicion03.cs" />
+    <Compile Include="Condiciones\Condicion02.cs" />
+    <Compile Include="Condiciones\Condicion01.cs" />
+    <Compile Include="Condiciones\Condicion09.cs" />
+    <Compile Include="Condiciones\Condicion08.cs" />
+    <Compile Include="Condiciones\Condicion07.cs" />
+    <Compile Include="Condiciones\Condicion06.cs" />
+    <Compile Include="Condiciones\Condicion05.cs" />
+    <Compile Include="Condiciones\Condicion04.cs" />
     <Compile Include="Condiciones\Condicion1.cs" />
     <Compile Include="Condiciones\Condicion10.cs" />
     <Compile Include="Condiciones\Condicion11.cs" />
@@ -81,6 +90,7 @@
     <Compile Include="Personas\Persona.cs" />
     <Compile Include="Personas\PersonaBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sneakers.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
