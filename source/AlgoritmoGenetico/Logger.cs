@@ -1,10 +1,6 @@
 ﻿using GAF;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AlgoritmoGenetico
@@ -43,7 +39,6 @@ namespace AlgoritmoGenetico
             informarNuevaLinea(Color.BlueViolet, "Mejor solución de la población final:");
             cromo = e.Population.Solutions.Find(x => x.Fitness == e.Population.MaximumFitness);
             informarCromosoma(cromo);
-
             informarNuevaLinea(Color.BlueViolet, "Mejor solución de la corrida:");
             if (mejorIteracion != 0)
             {
@@ -51,14 +46,11 @@ namespace AlgoritmoGenetico
                 informarCromosoma(mejorSolucion);
             }
             else informarNuevaLinea(Color.HotPink, "No hubo una mejor solucion durante la corrida");
-
             informarNuevaLinea(Color.BlueViolet, "Población de la solución:");
-
             foreach (Chromosome cromosoma in e.Population.Solutions)
             {
                 informarCromosoma(cromosoma);
             }
-
         }
 
         private void informarCromosoma(Chromosome cromosoma)
@@ -68,12 +60,9 @@ namespace AlgoritmoGenetico
 
         public void informarNuevaLinea(Color color, string text)
         {
-           
             text += Environment.NewLine;
-
             box.SelectionStart = box.TextLength;
             box.SelectionLength = 0;
-
             box.SelectionColor = color;
             box.AppendText(text);
             box.SelectionColor = box.ForeColor;

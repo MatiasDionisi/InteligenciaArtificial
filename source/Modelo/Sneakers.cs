@@ -1,6 +1,5 @@
 ﻿namespace Modelo
 {
-
     public enum Sneakers
     {
         INVALID0,
@@ -8,5 +7,4 @@
         Adidas,
         Topper
     }
-
 }
