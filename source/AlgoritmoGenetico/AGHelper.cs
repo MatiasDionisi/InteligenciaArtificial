@@ -15,9 +15,7 @@ namespace AlgoritmoGenetico
         static public double probabilidadDeMutacion = 0.12;
         const int longitudDelCromosoma = 30;
         private Stopwatch reloj = new Stopwatch();
-//      static public int fitnessRequerido = 1350;
         static public int fitnessRequerido = 180;
-//      static public int cantidadDeIteraciones = 1000;
         static public int cantidadDeIteraciones = 1000;
         double mejorFitness = -1;
         private Logger logger;
@@ -33,6 +31,7 @@ namespace AlgoritmoGenetico
             }
             return _instance;
         }
+
         private static int _cantidadDePoblacion = 100;
         public static int cantidadDePoblacion
         {
@@ -87,7 +86,7 @@ namespace AlgoritmoGenetico
             logger = Logger.Instance;
             reloj.Start();
 
-            // create selection operators
+            // Create selection operators
             _selectionOperators = new List<GeneticOperator>() {
                 new GeneticOperator()
                 {
@@ -106,8 +105,7 @@ namespace AlgoritmoGenetico
                 }
             };
 
-            // create cross operators
-
+            // Create cross operators
             _crossOperators = new List<GeneticOperator>() {
                 new GeneticOperator()
                 {
@@ -127,7 +125,7 @@ namespace AlgoritmoGenetico
                 }
             };
 
-            // create mutation operators
+            // Create mutation operators
             _mutationOperators = new List<GeneticOperator>() {
                 new GeneticOperator()
                 {
@@ -136,7 +134,7 @@ namespace AlgoritmoGenetico
                 },
                 new GeneticOperator()
                 {
-                    Name= "Convergencia",
+                    Name= "Adaptativa por convergencia",
                     Operator = new SwapMutate(mutationProbability: probabilidadDeMutacion)
                 }
             };
@@ -144,16 +142,12 @@ namespace AlgoritmoGenetico
 
         public void Run()
         {
-            //create the GA
             ga = new GeneticAlgorithm(CreatePopulation(), CalcularFitness);
-            //hook up to some useful events
             ga.OnGenerationComplete += ga_OnGenerationComplete;
             ga.OnRunComplete += ga_OnRunComplete;
-            //add the operators
             ga.Operators.Add(SelectionOperator);
             ga.Operators.Add(CrossOperator);
             ga.Operators.Add(MutationOperator);
-
             ga.Run(FinalizarAG);
         }
 
@@ -198,8 +192,6 @@ namespace AlgoritmoGenetico
         public static double CalcularFitness(Chromosome cromosoma)
         {
             double valorFitness = -1;
-            //var distanceToTravel = CalculateDistance(chromosome);
-            //return 1 - distanceToTravel / 10000;
             if (cromosoma != null)
             {
                 if (cromosoma.Count.Equals(longitudDelCromosoma))

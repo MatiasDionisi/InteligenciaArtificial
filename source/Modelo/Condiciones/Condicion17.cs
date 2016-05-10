@@ -11,8 +11,6 @@ namespace Modelo.Condiciones
         public double valueFromPersona(List<Persona> personas)
         {
             double retorno = (double)Valores.INVALIDO;
-//          if (personas.FindAll(persona => persona.Name.Equals(Name.Baltasar) && !persona.Vehicle.Equals(Vehicle.Moto))
-//          .Count > 0)
             if (personas.FindAll(persona => persona.Name.Equals(Name.Rakitic) && !persona.Nationality.Equals(Nationality.Brasileño)).Count > 0 &&
                 personas.FindAll(persona => persona.Name.Equals(Name.Rakitic)).Count == 1)
             {

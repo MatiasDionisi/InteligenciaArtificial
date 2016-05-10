@@ -8,12 +8,9 @@ namespace Modelo.Condiciones
 {
     class Condicion13 : ICondition
     {
-        List<Int32> vehiculos = new List<int> { (Int32)MouthAction.Maldice, (Int32)MouthAction.Recita, (Int32)MouthAction.Silba };
         public double valueFromPersona(List<Persona> personas)
         {
             double retorno = (double)Valores.INVALIDO;
-//          if (personas.FindAll(persona => persona.Vehicle.Equals(Vehicle.Moto) && !vehiculos.Contains((Int32)persona.MouthAction))
-//                .Count > 0 && personas.FindAll(persona => persona.Vehicle.Equals(Vehicle.Moto)).Count == 1)
             if (personas.FindAll(persona => persona.Name.Equals(Name.TerStegen) && !persona.Nationality.Equals(Nationality.Español)).Count > 0 &&
                 personas.FindAll(persona => persona.Name.Equals(Name.TerStegen)).Count == 1)
             {

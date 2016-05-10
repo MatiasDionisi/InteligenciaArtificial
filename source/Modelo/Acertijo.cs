@@ -27,15 +27,6 @@ namespace Modelo
             condiciones.Add(new Condicion07());
             condiciones.Add(new Condicion08());
             condiciones.Add(new Condicion09());
-//          condiciones.Add(new Condicion1());
-//          condiciones.Add(new Condicion2());
-//          condiciones.Add(new Condicion3());
-//          condiciones.Add(new Condicion4());
-//          condiciones.Add(new Condicion5());
-//          condiciones.Add(new Condicion6());
-//          condiciones.Add(new Condicion7());
-//          condiciones.Add(new Condicion8());
-//          condiciones.Add(new Condicion9());
             condiciones.Add(new Condicion10());
             condiciones.Add(new Condicion11());
             condiciones.Add(new Condicion12());
@@ -45,15 +36,6 @@ namespace Modelo
             condiciones.Add(new Condicion16());
             condiciones.Add(new Condicion17());
             condiciones.Add(new Condicion18());
-//          condiciones.Add(new Condicion19());
-//          condiciones.Add(new Condicion20());
-//          condiciones.Add(new Condicion21());
-//          condiciones.Add(new Condicion22());
-//          condiciones.Add(new Condicion23());
-//          condiciones.Add(new Condicion24());
-//          condiciones.Add(new Condicion25());
-//          condiciones.Add(new Condicion26());
-//          condiciones.Add(new Condicion27());
         }
         #endregion
 
@@ -149,13 +131,9 @@ namespace Modelo
 
             valor += validarInvalidos(personas);
 
- //         valor += validarMouthActionsRepetidas(personas);
-
             valor += validarNombresRepetidos(personas);
 
             valor += validarNacionalidadesRepetidas(personas);
-
-//          valor += validarVehiculosRepetidas(personas);
 
             return valor;
         }
@@ -164,7 +142,6 @@ namespace Modelo
         {
             Chromosome cromosoma = new Chromosome();
             List<string> caracteristicas = new List<string>();
-//          var genes = particionar(particion, 3);
             var genes = particionar(particion, 3);
             int i = 0;
             foreach (var gen in genes)
@@ -180,17 +157,14 @@ namespace Modelo
 
         public List<Persona> CrearModelos(Chromosome cromosoma)
         {
-//          var particiones = particionar(cromosoma.Genes, 9);
             var particiones = particionar(cromosoma.Genes, 5);
             List<Persona> personas = new List<Persona>();
             int i = 0;
             List<string> nombres = obtenerNombres();
             foreach (var particion in particiones)
             {
-                //TODO Verificar el método obtenerGenesAuxiliares para obtener los genes principales y auxiliares
                 List<string> genesAuxiliares = obtenerGenesAuxiliares(particion.ToList<Gene>());
                 PersonaBuilder builder = PersonaBuilder.Instance;
-//              builder.configurar(i, genesAuxiliares[0], genesAuxiliares[1], genesAuxiliares[2], nombres[i]);
                 builder.configurar(i, genesAuxiliares[0], genesAuxiliares[1], nombres[i]);
                 Persona modelo = builder.build();
                 personas.Add(modelo);
@@ -199,8 +173,7 @@ namespace Modelo
             return personas;
         }
 
-
-        //metodo para particionar el cromosoma en genes principales y genes auxiliares
+        //Metodo para particionar el cromosoma en genes principales y genes auxiliares
         public static IEnumerable<IEnumerable<T>> particionar<T>(IEnumerable<T> items,
                                                        int partitionSize)
         {
@@ -227,13 +200,12 @@ namespace Modelo
         private List<string> obtenerNombres()
         {
             List<string> nombres = new List<string>();
-//          nombres.Add("000");
             nombres.Add("001");
             nombres.Add("010");
             nombres.Add("011");
             nombres.Add("100");
-            nombres.Add("101"); //agregado
-            nombres.Add("110"); //agregado
+            nombres.Add("101");
+            nombres.Add("110");
             return nombres;
         }
     }

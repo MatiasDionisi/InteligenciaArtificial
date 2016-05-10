@@ -171,7 +171,6 @@
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Valor de Corte:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // numericUpDown1
             // 
@@ -199,7 +198,6 @@
             this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Iteraciones Maximas:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox4
             // 
@@ -322,7 +320,6 @@
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 8;
             this.label9.Text = "Torneo";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label4
             // 
@@ -332,7 +329,6 @@
             this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Porcentaje de elitismo:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // elitismPercentage
             // 
@@ -363,7 +359,6 @@
             this.selectionComboBox.TabIndex = 0;
             this.selectionComboBox.ValueMember = "null";
             this.selectionComboBox.Visible = false;
-            this.selectionComboBox.SelectedIndexChanged += new System.EventHandler(this.SelectionOperatorChanged);
             // 
             // label1
             // 
@@ -393,7 +388,6 @@
             this.configurationPage.TabIndex = 0;
             this.configurationPage.Text = "Configurar algoritmo";
             this.configurationPage.UseVisualStyleBackColor = true;
-            this.configurationPage.Click += new System.EventHandler(this.configurationPage_Click);
             // 
             // progressBar
             // 

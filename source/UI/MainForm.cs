@@ -39,7 +39,6 @@ namespace UI
         private void LoadGeneticOperatorsIntoControl(List<GeneticOperator> geneticOperators, ComboBox control)
         {
             control.Items.AddRange(geneticOperators.Cast<object>().ToArray());
-            
             control.SelectedIndex = 0;
         }
 
@@ -49,8 +48,7 @@ namespace UI
         }
 
         private void EjecutarGAF()
-        {
-            
+        {         
             progressBar.Value = 1;
             groupBox1.Enabled = false;
             Iniciar.Enabled = false;
@@ -80,11 +78,6 @@ namespace UI
             agInstance.MutationOperator= selectedMutationOperator.Operator;
         }
 
-        private void SelectionOperatorChanged(object sender, EventArgs e)
-        {
- //           elitismOptions.Visible = selectionComboBox.SelectedIndex == 0;
-        }
-
         private void ElitismOptionsChanged(object sender, EventArgs e)
         {
             agInstance.UpdateElitismOptions((int)elitismPercentage.Value);
@@ -103,16 +96,6 @@ namespace UI
             progressBar.Value = (int) (Decimal.Divide(e.Generation, AGHelper.cantidadDeIteraciones) * 100);
             currentResultsTab.AddPoint(e.Generation, e.Population.MaximumFitness);
             currentResultsTab.ShowChart(e);
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -136,21 +119,6 @@ namespace UI
             numericUpDown2.Value = AGHelper.fitnessRequerido;
             numericUpDown3.Value = (Decimal)AGHelper.probabilidadDeMutacion;
             numericUpDown4.Value = AGHelper.cantidadDePoblacion;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void configurationPage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

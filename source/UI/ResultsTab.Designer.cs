@@ -54,7 +54,6 @@
             this.chart.Size = new System.Drawing.Size(450, 300);
             this.chart.TabIndex = 3;
             this.chart.Text = "chart";
-            this.chart.Click += new System.EventHandler(this.chart_Click);
             // 
             // label1
             // 
@@ -82,7 +81,6 @@
             this.Controls.Add(this.chart);
             this.Name = "ResultsTab";
             this.Size = new System.Drawing.Size(455, 450);
-            this.Load += new System.EventHandler(this.ResultsTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
