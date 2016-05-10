@@ -40,8 +40,8 @@ namespace Modelo.Personas
         public void configurar(int indice, string botines, string nacionalidad, string nombre)
         {
             Indice = indice;
-            Botines = botines;
-            Nacionalidad = nacionalidad;
+            Botines = nacionalidad;
+            Nacionalidad = botines;
             Nombre = nombre;
         }
 

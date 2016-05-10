@@ -82,7 +82,7 @@ namespace UI
 
         private void SelectionOperatorChanged(object sender, EventArgs e)
         {
-            elitismOptions.Visible = selectionComboBox.SelectedIndex == 0;
+ //           elitismOptions.Visible = selectionComboBox.SelectedIndex == 0;
         }
 
         private void ElitismOptionsChanged(object sender, EventArgs e)
@@ -125,11 +125,32 @@ namespace UI
             AGHelper.fitnessRequerido = (int)numericUpDown2.Value;
         }
 
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            AGHelper.cantidadDePoblacion = (int)numericUpDown4.Value;
+        }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             numericUpDown1.Value = AGHelper.cantidadDeIteraciones;
             numericUpDown2.Value = AGHelper.fitnessRequerido;
             numericUpDown3.Value = (Decimal)AGHelper.probabilidadDeMutacion;
+            numericUpDown4.Value = AGHelper.cantidadDePoblacion;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void configurationPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

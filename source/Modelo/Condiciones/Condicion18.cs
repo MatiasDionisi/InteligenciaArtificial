@@ -16,6 +16,10 @@ namespace Modelo.Condiciones
 //          {
 //              retorno = (double)Valores.VALIDO;
 //          }
+            if (personas.FindAll(persona => persona.Nationality.Equals(Nationality.Aleman) && persona.Sneakers.Equals(Sneakers.Nike)).Count == 1)
+            {
+                retorno = (double)Valores.VALIDO;
+            }
             return retorno;
         }
     }

@@ -44,7 +44,7 @@ namespace Modelo
             condiciones.Add(new Condicion15());
             condiciones.Add(new Condicion16());
             condiciones.Add(new Condicion17());
-//          condiciones.Add(new Condicion18());
+            condiciones.Add(new Condicion18());
 //          condiciones.Add(new Condicion19());
 //          condiciones.Add(new Condicion20());
 //          condiciones.Add(new Condicion21());

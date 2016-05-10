@@ -30,9 +30,10 @@ namespace UI
             var maxIndividualChromosome = e.Population.GetTop(1).First();
             var maxIndividual = Acertijo.Instance.CrearModelos(maxIndividualChromosome);
             resultsText.Text = "Generaciones: " + e.Generation + "\n" +
-                "Población final: " + "\n" +
-                "Tamaño: " + e.Population.PopulationSize + " individuos" + "\n" +
-                "Mejor individuo: " + "\n"+
+//              "Población final: " + "\n" +
+//              "Tamaño: " + e.Population.PopulationSize + " individuos" + "\n" +
+                "Población final: " + e.Population.PopulationSize + " individuos" + "\n" +
+//              "Mejor individuo: " + "\n"+
                 "Mejor individuo Fitness: " + e.Population.MaximumFitness.ToString() + "\n";
             foreach (var persona in maxIndividual)
             {
@@ -41,6 +42,11 @@ namespace UI
         }
 
         private void chart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResultsTab_Load(object sender, EventArgs e)
         {
 
         }
